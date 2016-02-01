@@ -16,7 +16,7 @@ and open the template in the editor.
         <div ng-app="" ng-controller="readNews">
             <ul>
                 <li ng-repeat="x in data">
-                    {{ x.title + " | " + x.date}}
+                    {{ x.title + ' | ' + x.date }}
                 </li>
             </ul>
         </div>
@@ -24,9 +24,9 @@ and open the template in the editor.
         <script>
             function readNews($scope, $http){
                 
-                $http.get("test.php")
+                $http.get("news.json")
                         .success(function (response) {
-                            $scope.data = response.data;
+                            $scope.data = response;
                 });
             }
         </script>

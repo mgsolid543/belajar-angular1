@@ -1,41 +1,12 @@
 <?php
-
-$string='{"person":[
-			{
-				"name":{"first":"John","last":"Adams"},
-                "age":"40"
-			},
-			{
-				"name":{"first":"Thomas","last":"Jefferson"},
-                "age":"35"
-			}
-		 ]}';
-
-$json_a=json_decode($string,true);
-
-$json_o=json_decode($string);
-// array method
-foreach($json_a[person] as $p)
-{
-echo '
-
-Name: '.$p[name][first].' '.$p[name][last].'
-
-Age: '.$p[age].'
-
-';
-
-}
-// object method
-foreach($json_o->person as $p)
-{
-echo '
-
-Name: '.$p->name->first.' '.$p->name->last.'
-
-Age: '.$p->age.'
-
-';
-}
-
+	$jsondata = file_get_contents("news.json");
+	$json = json_decode($jsondata, true);
+	
+	$output = "<ul>";
+	foreach($json['news'] as $news)
+	{
+		$output .= "<li>" .$news['title']. " | " .$news['date']. "</li>";
+	}
+	$output .= "</ul>";
+	echo $output;
 ?>
