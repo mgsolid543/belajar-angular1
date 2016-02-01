@@ -24,9 +24,9 @@ and open the template in the editor.
         <script>
             function readNews($scope, $http){
                 
-                $http.get("http://mirzailhami.com/iqra/data.php?catID=2")
+                $http.get("test.php")
                         .success(function (response) {
-                            $scope.data = response[2].data;
+                            $scope.data = response.data;
                 });
             }
         </script>
