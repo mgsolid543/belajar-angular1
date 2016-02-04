@@ -52,4 +52,4 @@ angular.module('Dribel', ['ionic'])
     }
     
     $scope.init();
-})
+});
