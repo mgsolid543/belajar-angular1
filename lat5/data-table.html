@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<h2>Contoh Data Tabel</h2>
+
+<table class="table table-hover table-striped table-bordered">
+    <thead>
+        <tr>
+            <td>Nama Barang</td>
+            <td>Harga</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="x in list">
+            <td>{{ x.nama }}</td>
+            <td>{{ x.harga }}</td>
+        </tr>
+    </tbody>
+</table>
