@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="Dribel">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-controller="bodyCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Car Images</h1>
+      </ion-header-bar>
+      <ion-content>
+          <div class="list card">
+              <a class="item item-avatar" href="#">
+                  <img src="img/fajar.jpg">
+                  <h2>Fajar Bukhaeri</h2>
+                  <p>Syuting film Death Note</p>
+              </a>
+              <div class="item item-image">
+                  <img src="img/saitama.jpg">
+              </div>
+              <a class="item item-icon-left" href="#">
+                  <i class="icon ion-compose"></i>
+                  Kirim Pesan...
+              </a>
+          </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
